@@ -1,6 +1,6 @@
 # Jenkins TP Link
 
-This project is used to turn on a TP-Link HS100/110 smart wi-fi plug depending on the build status of a Jenkins server.
+This project is used to turn on/off a TP-Link HS100/110 smart wi-fi plug depending on the build status of a Jenkins server.
 The script will turn the plug on if any of the jobs are 'red' in colour, and turn the plug off if otherwise. The script
 will also turn off the plug outside of office hours to save energy.
 
