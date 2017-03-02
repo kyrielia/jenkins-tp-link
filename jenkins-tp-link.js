@@ -8,11 +8,11 @@ var jenkinsUrl = 'http://yourJenkinsUrl';
 var officeOpeningDays = [1, 2, 3, 4, 5]; // MON-FRI
 var officeOpeningHours = 9;
 var officeClosingHours = 18;
-var refreshInterval = 1000;
+var refreshInterval = 60000;
 
 var plug = client.getPlug({host: plugHostIp, timeout: 5000});
 
-setInterval(function() {
+var updateLights = function() {
     // Turn plug on during office hours only
     var date = new Date();
     if (!(date.getDay() in officeOpeningDays) || date.getHours() < officeOpeningHours || date.getHours() >= officeClosingHours) {
@@ -31,4 +31,7 @@ setInterval(function() {
 
         plug.setPowerState(brokenBuild);
     });
-}, refreshInterval);
+};
+
+updateLights();
+setInterval(updateLights, refreshInterval);
