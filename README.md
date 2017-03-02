@@ -16,3 +16,8 @@ and wifi connections simultaneously), update the `setup.sh` script with the IP a
 ### Running the script
 
 From Terminal: `rhino jenkins-tp-link.js`
+
+### Credits
+
+Thanks to Patrick Seal ([@plasticrake](https://github.com/plasticrake)) for creating the [Node HS100 API](https://github.com/plasticrake/hs100-api).
+It made creating this script very straightforward.
