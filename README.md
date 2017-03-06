@@ -15,7 +15,7 @@ and wifi connections simultaneously), update the `setup.sh` script with the IP a
 
 ### Running the script
 
-From Terminal: `rhino jenkins-tp-link.js`
+From Terminal: `node jenkins-tp-link.js`
 
 ### Credits
 
