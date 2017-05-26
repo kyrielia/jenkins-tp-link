@@ -15,7 +15,7 @@ var plug = client.getPlug({host: plugHostIp, timeout: 5000});
 var updateLights = function() {
     // Turn plug on during office hours only
     var date = new Date();
-    if (!(date.getDay() in officeOpeningDays) || date.getHours() < officeOpeningHours || date.getHours() >= officeClosingHours) {
+    if (!(officeOpeningDays.indexOf(date.getDay()) !== -1 && date.getHours() >= officeOpeningHours || date.getHours() < officeClosingHours)) {
         plug.setPowerState(false);
         return;
     }
